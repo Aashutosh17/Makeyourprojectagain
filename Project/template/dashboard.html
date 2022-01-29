@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            background-color: purple;
+            min-height: 100vh;
+            margin: 0;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            background-color: rgb(146, 78, 146);
+            text-align: center;
+        }
+
+        .container table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div>
+        <a href="/login/logout">Log out</a>
+    </div>
+
+    <div class="container">
+        <table border="1">
+            <h1>This is the Dashboard!</h1>
+            <br />
+            <h3>Data fetched from backend</h3>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Country</th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <td>{{data.customer_id}}</td>
+                <td>{{data.user_name}} </td>
+                <td>{{data.user_email}}</td>
+                <td>{{data.user_country}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+
+</html>

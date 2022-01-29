@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+#anchor {
+  color: rgb(236, 236, 236);
+  display: inline-block;
+  background-color: #802fa3;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 5px 7px 5px 7px;
+}
+
+#anchor:hover {
+  background-color: #82419e;
+  box-shadow: 0px 0px 7px black;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgb(211, 187, 187);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+}
+
+.header {
+  /* background-color: #f7f7f7; */
+  /* border-bottom: 1px solid; */
+  background: rgb(211, 187, 187);
+  box-shadow: 0 2px 5px rgb(197, 162, 161);
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  /* display: inline-block; */
+  margin-bottom: 5px;
+}
+
+/* for inputs */
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* for country */
+.form-control select {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* when input is valid */
+.form-control.success input {
+  border-color: green;
+}
+
+/* when input is invalid */
+.form-control.error input {
+  border-color: red;
+}
+
+.form-control.default select {
+  border-color: red;
+}
+
+.form-control.default small {
+  color: red;
+  visibility: visible;
+}
+
+.form-control.selected select {
+  border-color: green;
+}
+
+/* valid */
+.form-control.success i.fa-check-circle {
+  color: green;
+  visibility: visible;
+}
+/* invalid */
+.form-control.error i.fa-exclamation-circle {
+  color: red;
+  visibility: visible;
+}
+/* error message */
+.form-control.error small {
+  color: red;
+  visibility: visible;
+}
+/* icon */
+.form-control i {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  visibility: hidden;
+}
+/* error messsage color and position */
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* button */
+.form #button {
+  background: #892faf;
+  border: 2px solid #ad6fc7;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form #button:hover {
+  box-shadow: 0px 0px 5px #000000;
+}
+
+#sign_in {
+  color: black;
+  text-align: center;
+}

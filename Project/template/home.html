@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Scrolling Webpage</title>
+    <link rel='stylesheet' type="text/css" href="{% static 'design/home.css' %}">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="{% static 'icon/all.min.css' %}">
+    <link rel="icon" href="{% static 'images/myprojects.png' %}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <header>
+            <!-- Logo -->
+            <img class="project_logo" src="{% static 'images/myprojects.png' %}" alt="logo">
+            <a href="#" class="logo">Project</a>
+
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <!-- Links -->
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#sec">About us</a></li>
+                    <li><a href="/login" class="active">Login</a></li>
+                    <li><a href="/register">Sign up</a></li>
+                </ul>
+            </div>
+        </header>
+    </nav>
+    <section>
+        <img src="{% static 'images/stars.png' %}" id="stars">
+        <img src="{% static 'images/moon.png' %}" id="moon">
+        <img src="{% static 'images/mountains_behind.png' %}" id="mountains_behind">
+        <h2 id="text">Make Your Project</h2>
+        <img src="{% static 'images/mountains_front.png' %}" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About us</h2>
+        <p>
+            Easily search, upload and request a project of any size on any programming laungage. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Quaerat perspiciatis sed dolores eius? Vero, ipsum! Illum
+            molestiae repellendus placeat nostrum iste velit suscipit ducimus voluptatibus eos, magnam possimus deserunt
+            dolorum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, ea mollitia atque numquam repellendus,
+            natus nisi sint,
+            odio ab deserunt veniam aliquid rerum praesentium ipsam? Similique ipsa repellendus velit tempore? Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Quaerat perspiciatis sed dolores eius? Vero, ipsum!
+            Illum
+            molestiae repellendus placeat nostrum iste velit suscipit ducimus voluptatibus eos, magnam possimus deserunt
+            dolorum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br><br>Quaerat, ea mollitia atque numquam
+            repellendus, natus nisi sint,
+            odio ab deserunt veniam aliquid rerum praesentium ipsam? Similique ipsa repellendus velit tempore?Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Quaerat perspiciatis sed dolores eius? Vero, ipsum!
+            Illum
+            molestiae repellendus placeat nostrum iste velit suscipit ducimus voluptatibus eos, magnam possimus deserunt
+            dolorum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br><br>Quaerat, ea mollitia atque numquam
+            repellendus, natus nisi sint,
+            odio ab deserunt veniam aliquid rerum praesentium ipsam? Similique ipsa repellendus velit tempore?Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Quaerat perspiciatis sed dolores eius? Vero, ipsum!
+            Illum
+            molestiae repellendus placeat nostrum iste velit suscipit ducimus voluptatibus eos, magnam possimus deserunt
+            dolorum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br><br> Quaerat, ea mollitia atque numquam
+            repellendus, natus nisi sint,
+            odio ab deserunt veniam aliquid rerum praesentium ipsam? Similique ipsa repellendus velit tempore?<br></p>
+        <br><br>
+
+        <h2>Contributors</h2>
+        <div class="contributors">
+            <div class="contributors-details">
+                <ul class="slider">
+                    <li class="items">
+                        <div class="photo">
+                            <div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>
+                                Contributor's Message
+                            </h3>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, ipsum at
+                                natus cum atque ut exercitationem nihil illo, quos autem nam, consequuntur unde quia
+                                quae maxime non eveniet sapiente!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <div class="photo">
+                            <div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>
+                                Contributor's Message
+                            </h3>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, ipsum at
+                                natus cum atque ut exercitationem nihil illo, quos autem nam, consequuntur unde quia
+                                quae maxime non eveniet sapiente!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <div class="photo">
+                            <div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>
+                                Contributor's Message
+                            </h3>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, ipsum at
+                                natus cum atque ut exercitationem nihil illo, quos autem nam, consequuntur unde quia
+                                quae maxime non eveniet sapiente!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <div class="photo">
+                            <div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>
+                                Contributor's Message
+                            </h3>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, ipsum at
+                                natus cum atque ut exercitationem nihil illo, quos autem nam, consequuntur unde quia
+                                quae maxime non eveniet sapiente!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <div class="photo">
+                            <div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>
+                                Contributor's Message
+                            </h3>
+                            <p class="message">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, ipsum at
+                                natus cum atque ut exercitationem nihil illo, quos autem nam, consequuntur unde quia
+                                quae maxime non eveniet sapiente!
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="{% static 'validation/script.js' %}"></script>
+    <script src="{% static 'validation/scripts.js' %}"></script>
+    <script src="{% static 'validation/slider.js' %}"></script>
+</body>
+
+</html>
