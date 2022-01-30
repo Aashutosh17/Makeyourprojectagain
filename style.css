@@ -1,361 +1,345 @@
-*{
-    margin: 0;
-    padding: 0;
-<<<<<<< HEAD
-    font-family: 'poppins', sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: #5a5a5a;
-
+a {
+  text-decoration: none;
+  color: #5a5a5a;
 }
 
-img{
-    cursor: pointer;
+img {
+  cursor: pointer;
 }
 
-.flex-div{
-    display: flex;
-    align-items: center;
+.flex-div {
+  display: flex;
+  align-items: center;
 }
 
-nav{
-    padding: 8px 2%;
-    justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: rgb(25, 8, 65);
-    position: sticky ;
-    top: 0;
-    z-index: 10; 
+nav {
+  padding: 8px 2%;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(25, 8, 65);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.nav-right img{
-    width: 25px;
-    margin-right: 25px;
-}
-
-.nav-right  .user-icon{
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 0;
-
-}
-.nav-left .menu-icon{
-    width: 22px;
-    margin-right: 25px;
+.nav-right img {
+  width: 25px;
+  margin-right: 25px;
 }
 
-.nav-left .logo{
-    width: 130px;
+.nav-right .user-icon {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 0;
+}
+.nav-left .menu-icon {
+  width: 22px;
+  margin-right: 25px;
 }
 
-.nav-middle .mic-icon{
-    width: 16px;
+.nav-left .logo {
+  width: 130px;
 }
 
-.nav-middle .search-box{
-     border: 1px solid rgb(135, 42, 223);
-     margin-right: 15px;
-     padding: 8px 12px;
-     border-radius: 25px;
-}
-.nav-middle .search-box input{
-    width: 400px;
-    border: 0;
-    outline: 0;
-    background: transparent;
+.nav-middle .mic-icon {
+  width: 16px;
 }
 
-.nav-middle .search-box img{
-    width: 15px;
+.nav-middle .search-box {
+  border: 1px solid rgb(135, 42, 223);
+  margin-right: 15px;
+  padding: 8px 12px;
+  border-radius: 25px;
+}
+.nav-middle .search-box input {
+  width: 400px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.nav-middle .search-box img {
+  width: 15px;
 }
 /* SIDE_BAR */
 
-.sidebar{
-    background: rgb(255, 255, 255);
-    width: 15%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    padding-left: 2%;
-    padding-top: 80px;
+.sidebar {
+  background: rgb(255, 255, 255);
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding-left: 2%;
+  padding-top: 80px;
 }
-.shortcut-links a img{
-    width: 20px;
-    margin-right: 20px;
+.shortcut-links a img {
+  width: 20px;
+  margin-right: 20px;
 }
-.shortcut-links a  {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
-    flex-wrap: wrap;
+.shortcut-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+  flex-wrap: wrap;
 }
-.shortcut-links a:first-child{
-    color: #ffffff;
+.shortcut-links a:first-child {
+  color: #ffffff;
 }
-.sidebar hr{
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    width:85%;
+.sidebar hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 85%;
 }
-.subscribed-list h3{
-    font-size: 13px;
-    margin: 20px 0;
-    color: #5a5a5a;
+.subscribed-list h3 {
+  font-size: 13px;
+  margin: 20px 0;
+  color: #5a5a5a;
 }
-.subscribed-list a{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
-    flex-wrap: wrap ;
+.subscribed-list a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+  flex-wrap: wrap;
 }
-.subscribed-list a img{
-    width:25px;
-    border-radius: 50%;
-    margin-right: 20px;  
+.subscribed-list a img {
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
-.small-sidebar{
-    width: 5%;
+.small-sidebar {
+  width: 5%;
 }
-.small-sidebar a p{
-    display: none;
+.small-sidebar a p {
+  display: none;
 }
-.small-sidebar h3{
-    display: none;
+.small-sidebar h3 {
+  display: none;
 }
-.small-sidebar hr{
-    width: 50%;
-    margin-bottom: 25px;;
+.small-sidebar hr {
+  width: 50%;
+  margin-bottom: 25px;
 }
 
 /* ------------main-------------- */
 
-.container{
-    background: #863ab8;
-    padding-left: 17%;
-    padding-right: 2%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.container {
+  background: #863ab8;
+  padding-left: 17%;
+  padding-right: 2%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.large-container{
-    padding: 7%;
-
-
+.large-container {
+  padding: 7%;
 }
-.banner{
-    width: 100%;
+.banner {
+  width: 100%;
 }
-.banner img{
-    width: 100%;
-    border-radius: 8px;
+.banner img {
+  width: 100%;
+  border-radius: 8px;
 }
-.list-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 16px;
-    grid-row-gap: 30px;
-    margin-top:15px;
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 16px;
+  grid-row-gap: 30px;
+  margin-top: 15px;
 }
-.vid-list .thumbnail{
-    width: 100%;
-    border-radius: 5%;
-
+.vid-list .thumbnail {
+  width: 100%;
+  border-radius: 5%;
 }
-.vid-list .flex-div{
-    align-items: flex-start;
-    margin-top: 7px;
+.vid-list .flex-div {
+  align-items: flex-start;
+  margin-top: 7px;
 }
 
-.vid-list .flex-div img{
-    width: 35px;
-    margin-right: 10px;
-    border-radius: 50%;
+.vid-list .flex-div img {
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 vid-info {
-    color: #5a5a5a;
-    font-size: 13px;
-
+  color: #5a5a5a;
+  font-size: 13px;
 }
 
-vid-info a{
-    color: #000;
-    font-weight: 600;
-    display: block;
-    margin-bottom:  5px;
+vid-info a {
+  color: #000;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
 }
 
-@media (max-width:900px) {
-    .menu-icon{
-        display: none;
-
-    }
-    .sidebar{
-        display: none;
-    }
-    .container , .large-container{
-        padding-left: 5%;
-        padding-right: 5%;
-
-    }
-    .nav-right img{
-        display: none;
-
-    }
-    .nav-left .user-icon{
-        display: block;
-        width: 30px;
-
-    }
-    .nav-middle .search-box input{
-        width: 100px;
-
-    }
-    .nav-middle .mic-icon{
-        display: none;
-    }
-    .logo{
-        width: 90px;
-    }
-
-    }
-
-=======
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  html,body{
-    display: grid;
-    height: 100%;
-    place-items: center;
-    text-align: center;
-    background: #000;
-  }
-  .container{
-    position: relative;
-    width: 400px;
-    background: #111;
-    padding: 20px 30px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .container .post{
+@media (max-width: 900px) {
+  .menu-icon {
     display: none;
   }
-  .container .text{
-    font-size: 25px;
-    color: #666;
-    font-weight: 500;
-  }
-  .container .edit{
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    font-size: 16px;
-    color: #666;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  .container .edit:hover{
-    text-decoration: underline;
-  }
-  .container .star-widget input{
+  .sidebar {
     display: none;
   }
-  .star-widget label{
-    font-size: 40px;
-    color: #444;
-    padding: 10px;
-    float: right;
-    transition: all 0.2s ease;
+  .container,
+  .large-container {
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  input:not(:checked) ~ label:hover,
-  input:not(:checked) ~ label:hover ~ label{
-    color: rgb(255, 68, 246);
-  }
-  input:checked ~ label{
-    color: rgb(255, 68, 208);
-  }
-  input#rate-5:checked ~ label{
-    color: rgb(255, 119, 226);
-    text-shadow: 0 0 20px #952;
-  }
-  #rate-1:checked ~ form header:before{
-    content: "I just hate it ";
-  }
-  #rate-2:checked ~ form header:before{
-    content: "I don't like it ";
-  }
-  #rate-3:checked ~ form header:before{
-    content: "It is awesome ";
-  }
-  #rate-4:checked ~ form header:before{
-    content: "I just like it ";
-  }
-  #rate-5:checked ~ form header:before{
-    content: "I just love it ";
-  }
-  .container form{
+  .nav-right img {
     display: none;
   }
-  input:checked ~ form{
+  .nav-left .user-icon {
     display: block;
+    width: 30px;
   }
-  form header{
-    width: 100%;
-    font-size: 25px;
-    color: rgb(255, 119, 244);
-    font-weight: 500;
-    margin: 5px 0 20px 0;
-    text-align: center;
-    transition: all 0.2s ease;
+  .nav-middle .search-box input {
+    width: 100px;
   }
-  form .textarea{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
+  .nav-middle .mic-icon {
+    display: none;
   }
-  form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: #eee;
-    border: 1px solid #333;
-    background: #222;
-    padding: 10px;
-    font-size: 17px;
-    resize: none;
+  .logo {
+    width: 90px;
   }
-  .textarea textarea:focus{
-    border-color: #444;
-  }
-  form .btn{
-    height: 45px;
-    width: 100%;
-    margin: 15px 0;
-  }
-  form .btn button{
-    height: 100%;
-    width: 100%;
-    border: 1px solid #444;
-    outline: none;
-    background: #222;
-    color: #999;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  form .btn button:hover{
-    background: #1b1b1b;
-  }
->>>>>>> Prince
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #000;
+}
+.container {
+  position: relative;
+  width: 400px;
+  background: #111;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post {
+  display: none;
+}
+.container .text {
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .edit:hover {
+  text-decoration: underline;
+}
+.container .star-widget input {
+  display: none;
+}
+.star-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: rgb(255, 68, 246);
+}
+input:checked ~ label {
+  color: rgb(255, 68, 208);
+}
+input#rate-5:checked ~ label {
+  color: rgb(255, 119, 226);
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before {
+  content: "I just hate it ";
+}
+#rate-2:checked ~ form header:before {
+  content: "I don't like it ";
+}
+#rate-3:checked ~ form header:before {
+  content: "It is awesome ";
+}
+#rate-4:checked ~ form header:before {
+  content: "I just like it ";
+}
+#rate-5:checked ~ form header:before {
+  content: "I just love it ";
+}
+.container form {
+  display: none;
+}
+input:checked ~ form {
+  display: block;
+}
+form header {
+  width: 100%;
+  font-size: 25px;
+  color: rgb(255, 119, 244);
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus {
+  border-color: #444;
+}
+form .btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover {
+  background: #1b1b1b;
+}
