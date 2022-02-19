@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Porject</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'design/upload.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+  <div style="position: relative;" class="wrapper">
+    <form action="" method="POST" enctype="multipart/form-data">
+
+      {% csrf_token %}
+
+      <div style="margin-bottom: 10px;">
+        <i style="transform: scale(0.3); position: absolute; left: -0.3rem; top: 1rem; color: black;"
+          class="fa fa-globe" aria-hidden="true"></i>
+        <span style="color: gray;">Public</span>
+      </div>
+      <input type="text" name="uploaded_by" value="{{profile.name}}" hidden>
+      <input type="text" class="form-control" name="project_title" placeholder="Project Title" required>
+      <hr>
+      <input type="url" name="links" class="form-control" placeholder="Github link (Required Field)" required>
+      <div class=" card-body">
+        <div calss="row">
+          <div class="col-md-9 text-secondary">
+            <textarea name="description" class="form-control" rows="3" placeholder="Description (Required Field)"
+              required></textarea>
+          </div>
+        </div>
+      </div>
+
+
+      <div onclick="document.getElementById('image').click()" style="border: 2px dashed #6990f2; cursor: pointer; display: flex;
+         justify-content: center; align-items: center; flex-direction: column;">
+        <input id="image" type="file" name="image" hidden required>
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p>Browse Project Image to Upload</p>
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
+      </div>
+      <small style="color: gray;">(Image Field is requiered!)</small>
+      <input style="margin-top: 10px;" type="submit" value="Upload" class="btn btn-primary float-right">
+    </form>
+  </div>
+
+  <script src="{% static 'validation/upload.js' %}"></script>
+
+
+</body>
+
+</html>
+<!-- <input class="file-input" type="file" name="file" hidden>
+<i class="fas fa-cloud-upload-alt"></i>
+<p>Browse Project Image to Upload</p>
+<input type="submit" value="Upload" class="btn btn-primary">
+<section class="progress-area"></section>
+<section class="uploaded-area"></section> -->

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projects wtih Modern Programming Languages</title>
+    <link rel="stylesheet" href="{% static 'design/dashboard.css' %}">
+    <style>
+        #comment::placeholder {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <a href="/login/dashboard">
+                <span style="color: white;">Dashboard</span>
+            </a>
+            <a href="/login/logout">
+                <span style="color: white; margin-left: 10px;">Sign Out</span>
+            </a>
+        </div>
+
+        <div class="nav-right flex-div">
+
+            <span style="color: white; margin: 10px; text-transform: capitalize;">
+                <a style="color: white;" href="/profile/{{profile.name}}">
+                    {{profile.name}}
+                </a>
+            </span>
+            <a href="/profile/{{profile.name}}">
+                <img style="width: 30px; height: 30px; border-radius: 50px;" src="{{profile.profile_pic.url}}"
+                    class="menu-icon">
+            </a>
+        </div>
+    </nav>
+
+    <div style="background-color: rgb(28, 109, 141);" class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <img style="width: 70%; height: 40%; background-color: white; border-radius: 5px; box-shadow: 0px 0px 3px black;"
+                    src="{{project_detail.image.url}}">
+                {% if project_detail.project_title == None %}
+                <h3>There is no title for this project set by the author.</h3>
+                {% else %}
+                <h3>{{project_detail.project_title}}</h3>
+                {% endif %}
+
+                <hr>
+                <div class="publisher">
+                    <img src="{{project_detail.profile_image.url}}">
+                    <div>
+                        <p>Uploded By: {{project_detail.uploaded_by}}</p>
+                    </div>
+                    <button type="button">+ Favorities </button>
+                </div>
+                <div class="vid-description">
+                    {% if project_detail.description == '' %}
+                    <p style="color: rgb(0, 0, 0)">No description provided by the author.
+                    </p>
+                    {% else %}
+                    <p>{{project_detail.description}}
+                    </p>
+                    {% endif %}
+                    <p style="color: rgb(201, 201, 201)">You can add this project to your Favorities and save for your
+                        future use.</p>
+                    <hr>
+                    <h4>3 comments</h4>
+                    <div class=" add-comment">
+                        <img src="{{profile.profile_pic.url}}">
+                        <input id="comment" type="text" placeholder="Write Comments">
+                    </div>
+                    <div class="old-comment">
+                        <img src="images/Jack.png">
+                        <div>
+                            <h3>JAck Nicholson <span>2 days ago</span></h3>
+                            <p> Thakyou for uploading this project 😃</p>
+                            <div class="comment-action">
+                                <img src="{% static 'images/dasd.jpg' %}">
+                                <span>100</span>
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All Replies</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="old-comment">
+                        <img src="images/Jack.png">
+                        <div>
+                            <h3>JAck Nicholson <span>2 days ago</span></h3>
+                            <p> Thakyou for uploading this project 😃</p>
+                            <div class="comment-action">
+                                <img src="images/like.png ">
+                                <span>100</span>
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All Replies</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

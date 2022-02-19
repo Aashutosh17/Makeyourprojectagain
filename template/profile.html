@@ -1,0 +1,150 @@
+{% load static %}
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'icon/all.min.css' %}">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'design/profile.css' %}">
+
+    <style>
+        .data {
+            width: 70%;
+            /* padding-left: 5%; */
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+
+        <div class="container">
+            <div class="main">
+                <div class="topbar">
+                    <a href="/login/logout">Logout</a>
+                    <a href="/login/dashboard">Dashboard</a>
+                    <a href="/">Home</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-1">
+                        <div class="card text-center sidebar">
+                            <div class="card-body">
+                                <img style="border: 1px solid rgb(143, 142, 142);" src="{{profiledata.profile_pic.url}}"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="mt-3">
+                                    <h3>{{profiledata.name}}</h3>
+                                    {% if request.user.is_superuser %}
+                                    {% if profiledata.profile_pic == "/images/default.jpg" %}
+                                    <input type="button" onclick="document.getElementById('getFile').click()"
+                                        class="btn btn-secondary" value="Upload Profile Picture">
+                                    {% else %}
+                                    <input type="button" onclick="document.getElementById('getFile').click()"
+                                        class="btn btn-secondary" value="Change Profile Picture">
+                                    {% endif %}
+                                    <input name="profile_pic" type='file' name="student_image" id="getFile"
+                                        style="display:none">
+                                    <small
+                                        style="display: inline-block; margin-top: 20px; color: rgb(63, 63, 63);">Note:(Only
+                                        .png, .jpg, .jpeg
+                                        files are
+                                        supported!)</small>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                            <div style="color: wheat;">
+                                Date Joined:
+                                {{user_email.date_joined.date}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-1">
+                        <!-- Form -->
+
+                        <div class="card mb-3 content">
+                            <h1 class="m-3 pt-3">About</h1>
+                            <i style="transform: scale(2); position: absolute; right: 1rem; top: 1rem;"
+                                class="fa fa-pen-square "></i>
+                            <hr>
+                            <div classs="card-body">
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h5>Username</h5>
+                                    </div>
+                                    <div class="col-md-9 text-secondary">
+                                        {% if request.user.is_superuser %}
+                                        <input type="text" class="form-control data" name="name"
+                                            value="{{profiledata.name}}">
+                                        {% else %}
+                                        <input type="text" class="form-control data" name="name"
+                                            value="{{profiledata.name}}" disabled>
+                                        {% endif %}
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h5>Email</h5>
+                                    </div>
+                                    <div class="col-md-9 text-secondary">
+                                        {% if request.user.is_superuser %}
+                                        <input type="email" class="form-control data" name="email"
+                                            value="{{profiledata.email}}">
+                                        {% else %}
+                                        <input type="email" class="form-control data" name="email"
+                                            value="{{profiledata.email}}" disabled>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h5>Country</h5>
+                                    </div>
+                                    <div class="col-md-9 text-secondary">
+                                        {% if request.user.is_superuser %}
+                                        <input class="form-control data" type="text" name="country"
+                                            value="{{profiledata.country}}">
+                                        {% else %}
+                                        <input class="form-control data" type="text" name="country"
+                                            value="{{profiledata.country}}" disabled>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="card mb-3 content">
+                            <h1 class="m-3">Bio</i>
+                                <i class="fa fa-address-book" aria></i>
+                            </h1>
+                            <div class=" card-body">
+                                <div calss="row">
+                                    <div class="col-md-9 text-secondary">
+                                        {% if request.user.is_superuser %}
+                                        <textarea name="bio" class="form-control" rows="3"
+                                            placeholder="Your Bio">{{profiledata.bio}}</textarea>
+                                        {% else %}
+                                        <textarea name="bio" class="form-control" rows="3" placeholder="Your Bio"
+                                            disabled>{{profiledata.bio}}</textarea>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if request.user.is_superuser %}
+                            <input style="position: absolute; right: 0rem;" class="btn btn-info save" type="submit"
+                                value="Save">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

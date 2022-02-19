@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#anchor {
+  color: rgb(236, 236, 236);
+  display: inline-block;
+  background-color: #802fa3;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 0px 7px 2px 7px;
+}
+
+#anchor:hover {
+  background-color: #82419e;
+  box-shadow: 0px 0px 7px black;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.form {
+  margin-left: 10%;
+  width: 80%;
+  border-bottom: solid black;
+  border-width: 1px;
+}
+
+.form input {
+  width: 80%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.forget_pass {
+  color: black;
+  margin-left: 50%;
+}
+
+.forget_pass:hover {
+  text-decoration: none;
+  box-shadow: 0 1px 0 black;
+  color: blue;
+}
+
+.hide {
+  position: absolute;
+  margin-top: 0.3em;
+}
+
+.hide:hover {
+  cursor: pointer;
+}
+
+#h_one {
+  margin-left: -15px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  width: 108.5%;
+  box-shadow: 0px 1px 2px gray;
+}
+
+#home-link {
+  position: absolute;
+  top: 10px;
+  left: 3rem;
+  /* border: 1px solid black; */
+  width: 80px;
+  height: 60px;
+  background-image: url(../images/myprojects.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#invalid {
+  list-style: none;
+  position: absolute;
+  top: 5.5rem;
+  left: 2.5rem;
+  width: 300px;
+  /* visibility: hidden; */
+  text-align: center;
+  color: rgb(131, 15, 15);
+  background-color: rgb(241, 137, 137);
+  border: solid rgb(136, 34, 34);
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+#login {
+  position: absolute;
+  margin-left: 7%;
+  width: 80%;
+  font-size: 140%;
+  height: 7%;
+  border-radius: 4px;
+  color: #fff;
+  background: #892faf;
+  border: 2px solid #bc8ad1;
+  border-width: 0;
+  cursor: pointer;
+}
+
+#login:hover {
+  box-shadow: 0px 0px 5px black;
+}
+
+.home-register {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.my_container {
+  overflow: hidden;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.my_login {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  /* border: solid 1px black; */
+  background: rgb(211, 187, 187);
+  /* background: rgb(177, 122, 177); */
+  box-shadow: 0px 3px 10px rgb(20, 17, 17);
+}
+
+.my_login .id {
+  color: #3d3d3f;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* .my_login input::placeholder {
+  color: rgb(182, 175, 175);
+} */
+
+#sign_up {
+  text-align: center;
+  /* margin-top: 10%; */
+}
+
+#show {
+  margin-left: 1px;
+  visibility: hidden;
+  /* visibility: visible; */
+}

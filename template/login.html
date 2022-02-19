@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="{% static 'images/myprojects.png' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'icon/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'design/login_2.css' %}" />
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.map.js' %}" defer></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row my_container">
+            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 my_login">
+                <form action="/login/validation" method="post">
+                    {% csrf_token %}
+                    <a href="/">
+                        <div id="home-link"></div>
+                    </a>
+                    <h1 id="h_one">
+                        Login
+                    </h1>
+                    <br />
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        {% if message.tags == "warning" %}
+                        <li id="invalid">
+                            {{message}}
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% for message in messages %}
+                    {% if message.tags == "success" %}
+                    <p id="acc_created">{{ message }}</p>
+                    {% endif %}
+                    {% endfor %}
+
+                    <!-- <p id="invalid">Invalid Email or password!</p> -->
+                    <label class="form" for="username">
+                        <span class="id">Username</span>
+                        <br>
+                        <br>
+                        <i class="far fa-envelope"></i>
+                        <input type="text" name="username" id="email" placeholder="Username">
+                    </label>
+                    <br>
+                    <br>
+                    <label class="form" for="password">
+                        <span class="id">Passowrd</span>
+                        <br>
+                        <br>
+                        <i class="fas fa-key"></i>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <i onclick="toggleShow()" id="show" class="fas fa-eye hide"></i>
+                        <i onclick="toggleHide()" id="hide" class="fas fa-eye-slash hide"></i>
+                    </label>
+                    <br>
+                    <br>
+                    <button id="login" type="submit">Login</button>
+                    <br>
+                    <br>
+                    <div>
+                        <a class="forget_pass" href="#">Forget Password?</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- <p id="sign_up">
+                    New user?<a id="anchor" href="/register">Sign up</a>
+                </p> -->
+                    <div class="home-register">
+                        <div class="hom"><a id="anchor" href="/">Home</a></div>
+                        <div class="register">
+                            <span>Create an account</span>
+                            <a id="anchor" href="/register">Sign up</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'validation/login.js' %} "></script>
+    <script>
+        setTimeout(function () {
+            $('#invalid').fadeOut('fast');
+        }, 2000);
+    </script>
+
+</body>
+
+</html>

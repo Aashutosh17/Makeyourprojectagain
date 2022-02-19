@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="{% static 'myprojects.png' %}">
+    <link rel="stylesheet" href="{% static '/icon/all.min.css' %}">
+    <link rel="stylesheet" href="{% static '/design/registration_2.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create account</h2>
+        </div>
+        <!-- {{form.as_p}} -->
+        <form onsubmit="return validation()" action="" id="form" class="form" method="POST">
+            {% csrf_token %}
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Username" id="username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email" id="email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password1" placeholder="Password" id="password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password_c">Confirm Passowrd</label>
+                <input type="password" name="password2" placeholder="Confirm Passowrd" id="password_c">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <!-- <button type="submit" style="cursor: pointer;">Register</button> -->
+            <input id="button" type="submit" style="cursor: pointer;" value="Register" />
+
+            <p id="sign_in">Already have an account?<a id="anchor" href="/login">Sign in</a></p>
+        </form>
+    </div>
+    <script src="{% static '/validation/registration_2.js' %}"></script>
+</body>
+
+</html>

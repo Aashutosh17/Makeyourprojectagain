@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeYour Project</title>
+    <link rel="stylesheet" href="{% static 'design/dashboard.css' %}">
+</head>
+
+<body>
+
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="{% static 'images1/menu.png' %}" class="menu-icon">
+            <img src="{% static 'images1/logu.png' %}" class="logo">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="{% static 'images1/search.png' %}">
+            </div>
+        </div>
+
+        <div class="nav-right flex-div">
+            <a style="color: white; margin-right: 10px;" href="/login/logout">Log out</a>
+            <img onclick="window.open('/upload/upload_project/{{request.user.username}}','upload_page','resizable=false,width=700px,height=600px,top=100,left=400')"
+                src="{% static 'images1/upload1.png' %}">
+
+            <a href="/profile/{{pic.name}}">
+                <img style="margin-top: 5px; width: 30px; height: 30px;" src="{{pic.profile_pic.url}}"
+                    class="user-icon">
+            </a>
+
+        </div>
+
+    </nav>
+    <!-- ---- SIDE-BAR ---- -->
+    <div class="sidebar">
+        <div class="shortcut-links">
+            <a href=""><img src="{% static 'images1/home.png' %}" alt="">
+                <p>Home</p>
+            </a>
+            <a href=""><img src="{% static 'images1/explore.png' %}" alt="">
+                <p>Explore</p>
+            </a>
+            <a href=""><img src="{% static 'images1/subscriprion.png' %}" alt="">
+                <p>Favourite</p>
+            </a>
+            <!-- <a href=""><img src="images1/library.png" alt=""><p>library</p></a>
+             <a href=""><img src="images1/history.png" alt=""><p>history</p></a>
+             <a href=""><img src="images1/playlist.png" alt=""><p>playlist</p></a>
+             <a href=""><img src="images1/messages.png" alt=""><p>messages</p></a> -->
+            <a href=""><img src="images1/show-more.png" alt="">
+                <p>Show More</p>
+            </a>
+            <hr>
+        </div>
+        <div class="subscribed-list">
+            <h3>Favourite users</h3>
+            <a href=""><img src="{% static 'images1/Jack.png' %}" alt="">
+                <p>Jack Nicholson</p>
+            </a>
+            <a href=""><img src="{% static 'images1/simon.png' %}" alt="">
+                <p>Simon Baker</p>
+            </a>
+            <a href=""><img src="{% static 'images1/tom.png' %}" alt="">
+                <p>Tom Hardy</p>
+            </a>
+            <a href=""><img src="{% static 'images1/megan.png' %}" alt="">
+                <p>Megan Ryan</p>
+            </a>
+            <a href=""><img src="{% static 'images1/cameron.png' %}" alt="">
+                <p>cameron Diaz</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- ----- main ----- -->
+
+    <div style="background: url(../static/images/background.jpg);background-repeat: no-repeat; background-size: cover;"
+        class="container">
+        <div class="banner">
+            <img src="{% static 'images1/banner.jpg' %}">
+        </div>
+        <!-- Files -->
+        <div class="list-container">
+            <!-- {% for data in datas %}
+            <div class="vid-list">
+                <a href="#"><img src="{{data.profile_pic.url}}" class='thumbnail'></a>
+                <div class="flex-div">
+                    <a href="/profile/{{data.name}}">
+                        <img src="{{data.profile_pic.url}}"">
+                    </a>
+                    <div class=" vid-info">
+                        <a href="/profile/{{data.name}}">{{data.name}}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %} -->
+        </div>
+        <div class="list-container">
+            {% for data in uploaded %}
+            <div class="vid-list">
+
+                <a href="/upload/project/{{data.id}}"><img
+                        style="background-color: rgb(167, 167, 167); border: 1px solid rgb(109, 101, 101);"
+                        src="{{data.image.url}}" class='thumbnail'></a>
+                <div class="flex-div">
+                    <a href="/profile/{{data.uploaded_by}}">
+                        <img style="width: 30px; height: 30px;" src="{{data.profile_image.url}}">
+                    </a>
+                    <div class=" vid-info">
+                        <small>Uploaded By: </small><a href="/profile/{{data.uploaded_by}}">{{data.uploaded_by}}</a>
+                        <div>
+                            <small style="color: rgb(255, 255, 255);">Post date: {{data.date}}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    <script src="{% static 'validation/dashboard.js' %}">
+
+    </script>
+</body>
+
+</html>
